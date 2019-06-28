@@ -22,7 +22,7 @@ class SaveView(View):
             Favorite.objects.create(
                 user=user,
                 substituted=substituted,
-                substitute=substituted
+                substitute=substitute
             )
             return JsonResponse({
                 'status': 'success',

@@ -34,6 +34,11 @@ class TestFavoriteView(TestCase):
             'substitute': self.good_product.barcode
         })
         self.assertEqual(Favorite.objects.filter(user=self.user).count(), 1)
+        favorite: Favorite = Favorite.objects.filter(user=self.user).first()  # type: ignore  # noqa
+        self.assertEqual(favorite.substitute.barcode,
+                         self.good_product.barcode)
+        self.assertEqual(favorite.substituted.barcode,
+                         self.bad_product.barcode)
 
     def test_insert_new_favorite_response(self) -> None:
         self.client.login(username=self.email, password=self.password)
