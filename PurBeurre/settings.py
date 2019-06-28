@@ -86,10 +86,8 @@ WSGI_APPLICATION = 'PurBeurre.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.path.join('purbeurre'),
-        'USER': os.environ.get('db_user'),
-        'PASSWORD': os.environ.get('db_pass'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db_thierry.db'),
     }
 }
 
@@ -143,6 +141,15 @@ STATICFILES_DIRS = (
 AUTH_USER_MODEL = 'User.User'
 
 LOGIN_URL: str = '/user/login'
+
+EMAIL_BACKEND: str = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST: str = os.environ['EMAIL_HOST']
+EMAIL_HOST_USER: str = os.environ['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD: str = os.environ['EMAIL_HOST_PASSWORD']
+EMAIL_USE_TLS: str = os.environ['EMAIL_USE_TLS']
+EMAIL_PORT: str = os.environ['EMAIL_PORT']
+DEFAULT_FROM_EMAIL: str = os.environ['DEFAULT_FROM_EMAIL']
+
 
 if os.environ.get('HEROKU'):
     # Activate Django-Heroku.

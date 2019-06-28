@@ -17,4 +17,6 @@ urlpatterns: List[path] = [
     path(_('account'),
          login_required(views.AccountView.as_view()),
          name=_('account')),
+    path(_('activate/<str:uid>/<str:token>'),
+         views.Activate.as_view(), name=_('activate')),
 ]
