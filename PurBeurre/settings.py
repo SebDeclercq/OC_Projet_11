@@ -61,11 +61,12 @@ ROOT_URLCONF = 'PurBeurre.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'),
-                 os.path.join(BASE_DIR, 'App', 'templates', 'App'),
-                 os.path.join(BASE_DIR, 'User', 'templates', 'User'),
-                 os.path.join(BASE_DIR, 'Food', 'templates', 'Food'),
-                 ],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'App', 'templates', 'App'),
+            os.path.join(BASE_DIR, 'User', 'templates', 'User'),
+            os.path.join(BASE_DIR, 'Food', 'templates', 'Food'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,9 +74,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-            ],
+            ]
         },
-    },
+    }
 ]
 
 WSGI_APPLICATION = 'PurBeurre.wsgi.application'
@@ -97,16 +98,14 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'
+    },
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'
     },
 ]
 
@@ -143,12 +142,12 @@ AUTH_USER_MODEL = 'User.User'
 LOGIN_URL: str = '/user/login'
 
 EMAIL_BACKEND: str = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST: str = os.environ['EMAIL_HOST']
-EMAIL_HOST_USER: str = os.environ['EMAIL_HOST_USER']
-EMAIL_HOST_PASSWORD: str = os.environ['EMAIL_HOST_PASSWORD']
-EMAIL_USE_TLS: str = os.environ['EMAIL_USE_TLS']
-EMAIL_PORT: str = os.environ['EMAIL_PORT']
-DEFAULT_FROM_EMAIL: str = os.environ['DEFAULT_FROM_EMAIL']
+EMAIL_HOST: str = os.environ.get('EMAIL_HOST')
+EMAIL_HOST_USER: str = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD: str = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS: bool = True
+EMAIL_PORT: int = 587
+DEFAULT_FROM_EMAIL: str = os.environ.get('DEFAULT_FROM_EMAIL')
 
 
 if os.environ.get('HEROKU'):
