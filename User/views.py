@@ -9,6 +9,7 @@ from django.contrib.auth import (
 from django.contrib.sites.shortcuts import get_current_site
 from django.core.mail import EmailMessage
 from django.http import HttpResponseBadRequest, HttpRequest, HttpResponse
+from django.template.loader import render_to_string
 from django.shortcuts import redirect, render
 from django.utils.encoding import force_bytes, force_text
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
@@ -62,18 +63,9 @@ class SignUpView(View):
             uid: bytes = urlsafe_base64_encode(force_bytes(user.pk))
             token: str = account_activation_token.make_token(user)
             activation_link: str = f"http://{current_site}/user/activate/{uid}/{token}"  # noqa
-            message: str = f'''
-            Hello {user.firstname},
-
-            Please activate your account on PurBeurre by following this link :
-
-            {activation_link}
-
-            You'll be asked a password and when set you'll be good to go !
-
-            The PurBeurre Team
-            '''
-            message = _(re.sub(r' {2,}', ' ', message))
+            message: str = render_to_string(
+                'email.txt', {'user': user, 'activation_link': activation_link}
+            )
             to_email: str = form.cleaned_data.get('email')
             email: EmailMessage = EmailMessage(
                 mail_subject, message, to=[to_email]

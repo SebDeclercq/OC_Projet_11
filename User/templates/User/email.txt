@@ -1,0 +1,9 @@
+Hello {{ user.firstname }},
+
+Please activate your account on PurBeurre by following this link :
+
+{{ activation_link }}
+
+You'll be asked a password and when set you'll be good to go !
+
+The PurBeurre Team
