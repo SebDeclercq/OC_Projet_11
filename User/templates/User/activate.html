@@ -10,11 +10,16 @@
             <h1 class="text-uppercase text-white font-weight-bold">Inscription - Validation</h1>
             <hr class="divider my-4">
           </div>
-          <div class="col-lg-8 align-self-baseline">
-              <form action="" id="activate" method='POST'>
+          <div class="col-lg-8 align-self-baseline text-white">
+              <p class="text-white">Veuillez saisir un mot de passe sécurisé d'au moins 8 caractères</p>
+              <form action="" id="activate2" method='POST'>
                   {% csrf_token %}
-                  {{ form.as_p }}
-                  <input class="btn btn-primary"type='submit' value='Valider'/>
+                  <label for="id_new_password1">Nouveau mot de passe :</label><br/>
+                  <input type="password" name="new_password1" required=""
+                  id="id_new_password1"><br/>
+                  <label for="id_new_password2">Confirmation :</label><br/>
+                  <input type="password" name="new_password2" required="" id="id_new_password2"><br/><br/>
+                  <input class="btn btn-primary" type="submit" value="Valider">
               </form>
           </div>
       </div>
