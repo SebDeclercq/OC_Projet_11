@@ -10,13 +10,25 @@ app_name: str = 'user'
 
 urlpatterns: List[path] = [
     path(_('login'), views.LoginView.as_view(), name=_('login')),
-    path(_('logout'),
-         login_required(views.LogoutView.as_view()),
-         name=_('logout')),
+    path(
+        _('logout'),
+        login_required(views.LogoutView.as_view()),
+        name=_('logout'),
+    ),
     path(_('signup'), views.SignUpView.as_view(), name=_('signup')),
-    path(_('account'),
-         login_required(views.AccountView.as_view()),
-         name=_('account')),
-    path(_('activate/<str:uid>/<str:token>'),
-         views.Activate.as_view(), name=_('activate')),
+    path(
+        _('account'),
+        login_required(views.AccountView.as_view()),
+        name=_('account'),
+    ),
+    path(
+        _('activate/<str:uid>/<str:token>'),
+        views.Activate.as_view(),
+        name=_('activate'),
+    ),
+    path(
+        _('inactive'),
+        login_required(views.InactiveView.as_view()),
+        name=_('inactive'),
+    ),
 ]

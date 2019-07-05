@@ -1,5 +1,5 @@
 from typing import Any, Optional
-import os
+import re
 from django.contrib.auth import (
     authenticate,
     login,
@@ -17,6 +17,7 @@ from .forms import SignUpForm
 from .models import User
 from .tokens import account_activation_token
 from django.contrib.auth.forms import SetPasswordForm
+from django.utils.translation import gettext_lazy as _
 
 
 class LoginView(TemplateView):
@@ -56,21 +57,29 @@ class SignUpView(View):
             user.set_unusable_password()
             user.save()
             # Send an email to the user with the token:
-            mail_subject: str = 'Activate your account.'
+            mail_subject: str = _('[PurBeurre] Activate your account')
             current_site: Any = get_current_site(request)
             uid: bytes = urlsafe_base64_encode(force_bytes(user.pk))
             token: str = account_activation_token.make_token(user)
             activation_link: str = f"http://{current_site}/user/activate/{uid}/{token}"  # noqa
-            message: str = f"Hello {user.firstname},\n {activation_link}"
+            message: str = f'''
+            Hello {user.firstname},
+
+            Please activate your account on PurBeurre by following this link :
+
+            {activation_link}
+
+            You'll be asked a password and when set you'll be good to go !
+
+            The PurBeurre Team
+            '''
+            message = _(re.sub(r' {2,}', ' ', message))
             to_email: str = form.cleaned_data.get('email')
             email: EmailMessage = EmailMessage(
                 mail_subject, message, to=[to_email]
             )
             email.send()
-            return HttpResponse(
-                'Please confirm your email address to '
-                'complete the registration'
-            )
+            return render(request, 'inactive.html')
         return HttpResponseBadRequest('Le formulaire est invalide')
 
 
@@ -96,19 +105,28 @@ class Activate(View):
         else:
             return HttpResponse('Activation link is invalid!')
 
-    def post(self, request, *args, **kwargs):
+    def post(
+        self, request: HttpRequest, *args: Any, **kwargs: Any
+    ) -> HttpResponse:
         form = SetPasswordForm(request.user, request.POST)
         if form.is_valid():
             user = form.save()
             update_session_auth_hash(
                 request, user
             )  # Important, to update the session with the new password
-            return HttpResponse('Password changed successfully')
+            return redirect('/')
         return HttpResponse('Password not set up')
 
 
 class AccountView(View):
     template_name: str = 'account.html'
+
+    def get(self, request: HttpRequest) -> HttpResponse:
+        return render(request, self.template_name)
+
+
+class InactiveView(View):
+    template_name: str = 'inactive.html'
 
     def get(self, request: HttpRequest) -> HttpResponse:
         return render(request, self.template_name)
