@@ -13,3 +13,15 @@ class TestAppViews(TestCase):
     def test_get_legal_notices(self) -> None:
         response: HttpResponse = self.client.get('/legal')
         self.assertTemplateUsed(response, 'legal_notice.html')
+
+    def test_i18n_lang_fr(self) -> None:
+        response: HttpResponse = self.client.get(
+            '/', HTTP_ACCEPT_LANGUAGE='fr'
+        )
+        self.assertIn(b'Accueil', response.content)
+
+    def test_i18n_lang_en(self) -> None:
+        response: HttpResponse = self.client.get(
+            '/', HTTP_ACCEPT_LANGUAGE='en'
+        )
+        self.assertIn(b'Home', response.content)
