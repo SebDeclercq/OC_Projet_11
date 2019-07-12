@@ -1,9 +1,11 @@
-Hello {{ user.firstname }},
+{% load i18n %}
 
-Please activate your account on PurBeurre by following this link :
+{% trans "Bonjour" %} {{ user.firstname }},
+
+{% trans "Veuillez activer votre compte PurBeurre en cliquant sur le lien suivant" %} :
 
 {{ activation_link }}
 
-You'll be asked a password and when set you'll be good to go !
+{% trans "Votre compte sera actif dès que vous aurez enregistré un mot de passe" %}
 
-The PurBeurre Team
+{% trans "L'équipe Pur Beurre" %}

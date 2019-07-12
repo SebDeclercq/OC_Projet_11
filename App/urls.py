@@ -8,6 +8,6 @@ app_name: str = 'app'
 
 
 urlpatterns: List[path] = [
-    path(_(''), views.IndexView.as_view(), name=_('index')),
+    path('', views.IndexView.as_view(), name=_('index')),
     path(_('legal'), views.LegalNoticeView.as_view(), name=_('legal_notice')),
 ]

@@ -1,28 +1,29 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
-{% block title %}Inscription{% endblock %}
+{% block title %}{% trans "Inscription" %}{% endblock %}
 
 {% block content %}
 <header class="masthead">
     <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
           <div class="col-lg-10 align-self-end">
-            <h1 class="text-uppercase text-white font-weight-bold">Inscription - Validation</h1>
+            <h1 class="text-uppercase text-white font-weight-bold">{% trans "Inscription - Validation" %}</h1>
             <hr class="divider my-4">
           </div>
           <div class="col-lg-8 align-self-baseline text-white">
-              <p class="text-white">Veuillez saisir un mot de passe sécurisé d'au moins 8 caractères</p>
-              <div role='alert' class="alert alert-danger" id="message">Saisissez les mots de passe</div><br/>
+              <p class="text-white">{% trans "Veuillez saisir un mot de passe sécurisé d'au moins 8 caractères" %}</p>
+              <div role='alert' class="alert alert-danger" id="message">{% trans "Saisissez les mots de passe" %}</div><br/>
               <form action="" id="activate2" method='POST'>
                   {% csrf_token %}
-                  <label for="id_new_password1">Nouveau mot de passe :</label><br/>
+                  <label for="id_new_password1">{% trans "Nouveau mot de passe" %} :</label><br/>
                   <input type="password" name="new_password1" required=""
                   id="id_new_password1"><br/>
-                  <label for="id_new_password2">Confirmation :</label><br/>
+                  <label for="id_new_password2">{% trans "Confirmation" %} :</label><br/>
                   <input type="password" name="new_password2" required=""
                   id="id_new_password2"><br/><br/>
                   <input id="submit" class="btn btn-primary"
-                  type="submit" value="Valider" disabled>
+                  type="submit" value="{% trans "Valider" %}" disabled>
               </form>
           </div>
       </div>

@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 {% load food_resize_img %}
 
-{% block title %}Fiche produit{% endblock %}
+{% block title %}{% trans "Fiche produit" %}{% endblock %}
 
 {% block content %}
 <section class="page-section bg-primary" id="picture" style="background-image: url('{{ substitute.img }}');">
@@ -30,7 +31,7 @@
     <div class="row flex-d justify-content-center" id="url-off">
         <div class="text-primary text-center" id="off-link-container">
             <h3><a id="off-link" href="{{ substitute.url }}"
-                target="_blank">Voir la fiche d'OpenFoodFacts</a></h3>
+                target="_blank">{% trans "Voir la fiche d'OpenFoodFacts" %}</a></h3>
         </div>
   </div>
   {% if user.is_authenticated %}
@@ -41,9 +42,9 @@
               <input type="hidden" name="substitute" value="{{ substitute.barcode }}"/>
               <input type="hidden" name="substituted" value="{{ substituted.barcode }}"/>
               {% if is_favorite %}
-              <input type="submit" class="btn btn-success" disabled=True value="Sauvegardé" />
+              <input type="submit" class="btn btn-success" disabled=True value="{% trans "Sauvegardé" %}" />
               {% else %}
-              <input type="submit" class="btn btn-primary" value="Sauvegarder" />
+              <input type="submit" class="btn btn-primary" value="{% trans "Sauvegarder" %}" />
               {% endif %}
           </form>
     </div>
