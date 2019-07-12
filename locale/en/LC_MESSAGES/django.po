@@ -7,16 +7,44 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-12 09:03+0000\n"
-"PO-Revision-Date: 2019-07-12 11:14+0200\n"
+"POT-Creation-Date: 2019-07-12 09:33+0000\n"
+"PO-Revision-Date: 2019-07-12 11:36+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: \n"
-"Language-Team: \n"
 "X-Generator: Poedit 2.2.3\n"
+
+#: App/templates/App/base.html:65 User/templates/User/account.html:4
+msgid "Mon compte"
+msgstr "My account"
+
+#: App/templates/App/base.html:71 Favorite/templates/Favorite/list.html:12
+msgid "Mes aliments"
+msgstr "My Foods"
+
+#: App/templates/App/base.html:76
+msgid "Me déconnecter"
+msgstr "Sign out"
+
+#: App/templates/App/base.html:80
+msgid "Me connecter"
+msgstr "Sign in"
+
+#: App/templates/App/base.html:97 App/templates/App/legal_notice.html:5
+msgid "Mentions légales"
+msgstr "Legal information"
+
+#: App/templates/App/base.html:102
+msgid "Contact"
+msgstr "Contact us"
+
+#: App/templates/App/index.html:13
+msgid "Du gras, oui, mais de qualité&nbsp;!"
+msgstr "Fat, yes, but of high quality&nbsp;!"
 
 #: App/templates/App/index.html:17
 msgid ""
@@ -85,10 +113,6 @@ msgstr "Contact us !"
 #: App/templates/App/index.html:72
 msgid "Une question ? Un commentaire ? Nous sommes disponibles !"
 msgstr "Do you have a question? Any comments? We are available!"
-
-#: App/templates/App/legal_notice.html:5
-msgid "Mentions légales"
-msgstr "Legal information"
 
 #: App/templates/App/legal_notice.html:17
 msgid "Le présent site web a été réalisé par "
@@ -170,10 +194,6 @@ msgstr ""
 msgid "Favoris"
 msgstr "Favorites"
 
-#: Favorite/templates/Favorite/list.html:12
-msgid "Mes aliments"
-msgstr "My Foods"
-
 #: Favorite/templates/Favorite/list.html:44
 msgid "Supprimer"
 msgstr "Delete"
@@ -206,10 +226,6 @@ msgstr "Results"
 #: Food/templates/Food/products.html:12
 msgid "Vous pouvez remplacer cet aliment par"
 msgstr "You can replace this food with"
-
-#: User/templates/User/account.html:4
-msgid "Mon compte"
-msgstr "My account"
 
 #: User/templates/User/activate.html:4 User/templates/User/signup.html:4
 #: User/templates/User/signup.html:12 User/templates/User/signup.html:24
