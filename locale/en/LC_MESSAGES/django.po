@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-12 09:33+0000\n"
-"PO-Revision-Date: 2019-07-12 11:36+0200\n"
+"POT-Creation-Date: 2019-07-12 09:59+0000\n"
+"PO-Revision-Date: 2019-07-12 12:00+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -41,6 +41,10 @@ msgstr "Legal information"
 #: App/templates/App/base.html:102
 msgid "Contact"
 msgstr "Contact us"
+
+#: App/templates/App/index.html:5
+msgid "Accueil"
+msgstr "Home"
 
 #: App/templates/App/index.html:13
 msgid "Du gras, oui, mais de qualité&nbsp;!"
