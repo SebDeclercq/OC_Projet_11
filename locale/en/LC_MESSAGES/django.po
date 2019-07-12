@@ -1,0 +1,290 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-12 09:03+0000\n"
+"PO-Revision-Date: 2019-07-12 11:14+0200\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.2.3\n"
+
+#: App/templates/App/index.html:17
+msgid ""
+"Trouvez un produit de substitution pour ceux que vous consommez tous les "
+"jours."
+msgstr "Find a substitute for the ones you consume every day."
+
+#: App/templates/App/index.html:23
+msgid "Chercher"
+msgstr "Search"
+
+#: App/templates/App/index.html:37
+msgid "Colette et Remy"
+msgstr "Colette and Remy"
+
+#: App/templates/App/index.html:39
+msgid "De la ratatouille aux croissants"
+msgstr "From ratatouille to croissants"
+
+#: App/templates/App/index.html:41
+msgid ""
+"Pur Beurre est l'initiative de deux amoureux de la gastronomie française, "
+"Colette Tatou et Rémy, que vous avez déjà certainement rencontrés dans notre "
+"excellent restaurant Ratatouille"
+msgstr ""
+"Pur Beurre is the initiative of two lovers of French gastronomy, Colette "
+"Tatou and Rémy, whom you have certainly already met in our excellent "
+"restaurant Ratatouille"
+
+#: App/templates/App/index.html:42
+msgid ""
+"Nous aimons tous manger, surtout en France ! Personnellement, une baguette "
+"fraîche, du bon fromage de chèvre et un bon vin rouge me suffisent "
+"amplement. Comme tout le monde, je fais mes courses au supermarché. Mais "
+"petit à petit je me suis rendue compte, surtout lorsque nous avons ouvert le "
+"restaurant, que je pouvais remplacer les produits aseptisés que j'avais "
+"l'habitude d'acheter par de bons produits du terroir Et souvent pour le même "
+"prix !"
+msgstr ""
+"We all like to eat, especially in France! Personally, a fresh baguette, good "
+"goat cheese and good red wine are more than enough for me. Like everyone "
+"else, I shop at the supermarket. But little by little I realized, especially "
+"when we opened the restaurant, that I could replace the sanitized products I "
+"used to buy with good local products And often for the same price!"
+
+#: App/templates/App/index.html:43
+msgid ""
+"Pour ma part je me rendais déjà dans bien des magasins car j'aime beaucoup "
+"me balader, surtout dans les caves et les cuisines. Je connaissais par coeur "
+"le contenu des boutiques bio (dont je raffole) ainsi que les ingrédients de "
+"tous les aliments vendus. Lorsque Colette m'a demandé si elle pouvait "
+"remplacer son Nutella matinal par un aliment plus sain, je savais tout de "
+"suite où le trouver. L'idée de Pur Beurre était née !"
+msgstr ""
+"For my part, I was already going to many stores because I like to walk "
+"around, especially in cellars and kitchens. I knew by heart the contents of "
+"the organic shops (which I love) as well as the ingredients of all the foods "
+"sold. When Colette asked me if she could replace her morning Nutella with a "
+"healthier food, I knew right away where to find it. The idea of Pure Butter "
+"was born!"
+
+#: App/templates/App/index.html:70
+msgid "Contactez-nous !"
+msgstr "Contact us !"
+
+#: App/templates/App/index.html:72
+msgid "Une question ? Un commentaire ? Nous sommes disponibles !"
+msgstr "Do you have a question? Any comments? We are available!"
+
+#: App/templates/App/legal_notice.html:5
+msgid "Mentions légales"
+msgstr "Legal information"
+
+#: App/templates/App/legal_notice.html:17
+msgid "Le présent site web a été réalisé par "
+msgstr "This website has been created by "
+
+#: App/templates/App/legal_notice.html:17
+msgid " pour la société PurBeurre. Le code source est "
+msgstr " for the company PurBeurre. The source code is "
+
+#: App/templates/App/legal_notice.html:17
+msgid "disponible ici"
+msgstr "available here"
+
+#: App/templates/App/legal_notice.html:18
+msgid "Afin de générer ce site, différents éléments suivants ont été récupérés"
+msgstr "In order to generate this site, the following elements were used"
+
+#: App/templates/App/legal_notice.html:20
+msgid "L'icône de la carotte"
+msgstr "The carrot icon"
+
+#: App/templates/App/legal_notice.html:20
+msgid "Créée par"
+msgstr "Created by"
+
+#: App/templates/App/legal_notice.html:21
+msgid "Les images de Remy et Colette"
+msgstr "The images of Remy and Colette"
+
+#: App/templates/App/legal_notice.html:21
+msgid "Fournies par"
+msgstr "Provided by"
+
+#: App/templates/App/legal_notice.html:21
+msgid "dans une perspective pédagogique"
+msgstr "from a pedagogical perspective"
+
+#: App/templates/App/legal_notice.html:22
+msgid "Les polices de caractères"
+msgstr "Character fonts"
+
+#: App/templates/App/legal_notice.html:22
+msgid "Tirées de"
+msgstr "Taken from"
+
+#: App/templates/App/legal_notice.html:23
+msgid "Le"
+msgstr "The"
+
+#: App/templates/App/legal_notice.html:23
+msgid "Adapté de"
+msgstr "Adapted from"
+
+#: App/templates/App/legal_notice.html:24
+msgid "Divers scripts JavaScript"
+msgstr "Various JavaScript scripts"
+
+#: App/templates/App/legal_notice.html:24
+msgid "Se référer aux mentions légales présentes dans les fichiers respectifs"
+msgstr "Refer to the legal notices in the respective files"
+
+#: App/templates/App/legal_notice.html:26
+msgid ""
+"Aucune donnée personnelle n'est exploitée par ce site, hormis les adresses "
+"emails et prénoms des membres inscrits. Actuellement, ces données servent "
+"strictement et uniquement au bon fonctionnement du site web. Ce comportement "
+"est susceptible de changer, selon la politique qu'établira PurBeurre. Toute "
+"modification de cette clause vous sera communiquée et soumise à votre "
+"validation formelle"
+msgstr ""
+"No personal data is used by this site, except the email addresses and first "
+"names of registered members. Currently, this data is used strictly and "
+"solely for the proper functioning of the website. This behaviour is subject "
+"to change, depending on the policy that PurButter will establish. Any "
+"modification of this clause will be communicated to you and submitted to "
+"your formal approval"
+
+#: Favorite/templates/Favorite/list.html:7
+msgid "Favoris"
+msgstr "Favorites"
+
+#: Favorite/templates/Favorite/list.html:12
+msgid "Mes aliments"
+msgstr "My Foods"
+
+#: Favorite/templates/Favorite/list.html:44
+msgid "Supprimer"
+msgstr "Delete"
+
+#: Favorite/templates/Favorite/list.html:53
+#: Food/templates/Food/products.html:59
+msgid "Pas de substitut trouvé"
+msgstr "No substitutes found"
+
+#: Food/templates/Food/details.html:6
+msgid "Fiche produit"
+msgstr "Product information"
+
+#: Food/templates/Food/details.html:34
+msgid "Voir la fiche d'OpenFoodFacts"
+msgstr "See the OpenFoodFacts page"
+
+#: Food/templates/Food/details.html:45 Food/templates/Food/products.html:46
+msgid "Sauvegardé"
+msgstr "Saved"
+
+#: Food/templates/Food/details.html:47 Food/templates/Food/products.html:48
+msgid "Sauvegarder"
+msgstr "Save"
+
+#: Food/templates/Food/products.html:7
+msgid "Résultats"
+msgstr "Results"
+
+#: Food/templates/Food/products.html:12
+msgid "Vous pouvez remplacer cet aliment par"
+msgstr "You can replace this food with"
+
+#: User/templates/User/account.html:4
+msgid "Mon compte"
+msgstr "My account"
+
+#: User/templates/User/activate.html:4 User/templates/User/signup.html:4
+#: User/templates/User/signup.html:12 User/templates/User/signup.html:24
+msgid "Inscription"
+msgstr "Registration"
+
+#: User/templates/User/activate.html:11
+msgid "Inscription - Validation"
+msgstr "Registration - Validation"
+
+#: User/templates/User/activate.html:15
+msgid "Veuillez saisir un mot de passe sécurisé d'au moins 8 caractères"
+msgstr "Please enter a secure password of at least 8 characters"
+
+#: User/templates/User/activate.html:16
+msgid "Saisissez les mots de passe"
+msgstr "Enter the passwords"
+
+#: User/templates/User/activate.html:19
+msgid "Nouveau mot de passe"
+msgstr "New password"
+
+#: User/templates/User/activate.html:22
+msgid "Confirmation"
+msgstr "Confirmation"
+
+#: User/templates/User/activate.html:26
+msgid "Valider"
+msgstr "Save"
+
+#: User/templates/User/email.txt:3
+msgid "Bonjour"
+msgstr "Hello"
+
+#: User/templates/User/email.txt:5
+msgid "Veuillez activer votre compte PurBeurre en cliquant sur le lien suivant"
+msgstr ""
+"Please activate your PurBeurre account by clicking on the following link"
+
+#: User/templates/User/email.txt:9
+msgid "Votre compte sera actif dès que vous aurez enregistré un mot de passe"
+msgstr "Your account will be active as soon as you have registered a password"
+
+#: User/templates/User/email.txt:11
+msgid "L'équipe Pur Beurre"
+msgstr "The PurBeurre Team"
+
+#: User/templates/User/inactive.html:5
+msgid "En attente"
+msgstr "On standby"
+
+#: User/templates/User/inactive.html:14
+msgid "Un email vous a été envoyé pour valider la création de votre compte"
+msgstr "An email has been sent to you to validate the creation of your account"
+
+#: User/templates/User/login.html:4 User/templates/User/login.html:29
+msgid "Connexion"
+msgstr "Connection"
+
+#: User/templates/User/login.html:19
+msgid "Informations incorrectes"
+msgstr "Incorrect information"
+
+#: User/templates/User/login.html:27
+msgid "Mot de passe"
+msgstr "Password"
+
+#: User/templates/User/login.html:33
+msgid "Pas encore inscrit ?"
+msgstr "Not yet registered?"
+
+#: User/templates/User/login.html:35
+msgid "Cliquez ici"
+msgstr "Click here"
+
+#: User/templates/User/signup.html:19
+msgid "Prénom"
+msgstr "Firstname"
